@@ -39,7 +39,7 @@ Pulsar is a distributed system for high-throughput publish/subscribe systems tha
 
 Python Data Structure for Streaming:  We will use Python's collections.deque class to understand how you can manage recent data efficiently. We'll use the deque class in our project. 
 
-## Create and erify your project repo has all 4 files:
+## Create and verify your project repo has all 4 files:
 
 README.md
 .gitignore
