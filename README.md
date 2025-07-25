@@ -51,3 +51,25 @@ Aside: To create a file in a folder in GitHub, just name the file with the relat
 
 dashboard/app.py
 And it should work.  Try not to make changes on your machine and in GitHub at the same time - that can create "merge conflicts" which are best avoided. Only edit the repo from one place  at a time. 
+
+## Start Project
+Start here:
+
+https://github.com/denisecase/cintel-05-cintel-basicLinks to an external site.
+
+Then, implement this slightly fancier version:
+
+https://github.com/denisecase/cintel-05-cintel-fancyLinks to an external site.
+
+Then, implement this version with a deque wrapped in a reactive value, showing the associated datagrid and a plotly chart with online machine learning. 
+
+https://github.com/denisecase/cintel-05-cintelLinks to an external site.
+
+Read the comments. Organize the code. When you get your version implemented, save it - use a good commit message to indicate you've recreated the functionality as requested. 
+
+Then, review the app, and:
+
+Propose a modification / enhancement / extension. 
+Plan your work. 
+Estimate the time it will take. 
+Implement your plan. 
