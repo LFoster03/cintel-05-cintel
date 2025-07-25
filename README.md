@@ -73,3 +73,149 @@ Propose a modification / enhancement / extension.
 Plan your work. 
 Estimate the time it will take. 
 Implement your plan. 
+
+### Penguin Colony Wind Monitor 🌬️🐧
+#### Your job is to:
+Implement the example provided (live data simulation using PyShiny).
+
+Propose and implement an enhancement, extension, or variation on the app.
+
+#### Possible Enhancements:
+Changing theme, colors, visuals to be more engaging
+
+Changing layout to better display data (e.g., deque or charts)
+
+Changing the chart to avoid flashing on update
+
+Changing the subject domain (e.g., from Antarctic temperature to another metric)
+
+Integrating live data into a previous app for continuous intelligence
+
+Goal: Understand the possibilities and challenges of working with live data and consider how “data in motion” can enhance analytics projects.
+
+#### What I Implemented
+1. Base Implementation
+Started from the PyShiny live data example (temperature readings in Antarctica).
+
+Used a reactive.calc() to generate fake live data at regular intervals.
+
+Stored the last 5 readings using a deque.
+
+Displayed:
+
+Current reading in a value box
+
+Historical readings in a data table
+
+A scatter plot with regression line for trends
+
+A histogram of recent values
+
+2. My Enhancement
+Changed domain: Simulated wind speed in a penguin colony instead of temperature.
+
+Wind speed range: 5–40 km/h.
+
+Added emojis and Font Awesome icon (wind) for visual appeal.
+
+Added a histogram to show wind speed distribution.
+
+Fixed axis formatting on the trend chart to remove scientific notation (display HH:MM:SS).
+
+Updated titles and labels to match the new theme.
+
+Features
+Live updates every 5 seconds (configurable).
+
+Deque storage: Always shows most recent 5 readings.
+
+Regression line: Automatically fits best line to recent trend.
+
+Multiple visualizations:
+
+Trend chart with regression line
+
+Histogram distribution
+
+Data table of recent readings
+
+UI Enhancements:
+
+Sidebar with description and resource links
+
+Value box showing current wind speed
+
+Emojis and iconography for clarity and fun
+
+Code Overview
+Key Components
+1. reactive_calc_combined()
+Generates wind speed and timestamp every 5 seconds.
+
+Appends data to a deque.
+
+Returns:
+
+deque_snapshot (raw deque)
+
+df (pandas DataFrame)
+
+latest_entry (most recent reading)
+
+2. UI Layout
+ui.page_opts(): Page title and full-width layout.
+
+ui.sidebar(): Info, links, and theme branding.
+
+ui.layout_columns():
+
+Value box for current wind speed
+
+Card for current timestamp
+
+Additional cards for:
+
+Recent readings table
+
+Wind speed trend with regression line
+
+Wind speed histogram
+
+3. Plotly Enhancements
+Scatter plot for trend.
+
+Regression line added using scipy.stats.linregress.
+
+Fixed x-axis to display time properly (no scientific notation).
+
+#### How to Run
+Option 1: Online (ShinyLive)
+Copy full code into https://shinylive.io/py/
+
+Click Run.
+
+Option 2: Locally in VS Code
+bash
+Copy
+Edit
+1. Install PyShiny
+pip install shiny shinywidgets pandas plotly scipy faicons
+
+2. Save code as app.py
+
+3. Run app
+shiny run --reload --launch-browser app.py
+Files
+app.py – Main PyShiny application
+
+README.md – Documentation (this file)
+
+Future Improvements
+Color-coded value box (green/yellow/red) based on wind speed.
+
+Add penguin-specific data (colony size, temperature, etc.).
+
+Integrate real weather API instead of simulated data.
+
+Combine histogram and trend in one dashboard for cleaner visuals.
+
