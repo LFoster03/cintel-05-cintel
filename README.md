@@ -219,3 +219,5 @@ Integrate real weather API instead of simulated data.
 
 Combine histogram and trend in one dashboard for cleaner visuals.
 
+#### Create Github Pages for app
+Create an index.html for the site
